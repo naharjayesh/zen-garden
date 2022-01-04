@@ -28,6 +28,13 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    color: var(--heading-color);
+    font-size: 2.4rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
 .container {
     max-width: 90%;
     margin: 0 auto;
@@ -93,12 +100,20 @@ a:hover {
 }
 
 .grid {
-    align-items: center;
+    align-items: top;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
+    gap: 0;
+    grid-template-columns: repeat(2, minmax(10rem, 2fr));
+    grid-template-rows: repeat(auto-fit, minmax(auto-fit, 100rem));
     height: 100%;
     margin: auto;
     width: 90%;
+}
+
+.content {
+    height: auto;
+    margin-top: 6rem;
+    margin-bottom: 0;
 }
 
 .content-header {
@@ -110,14 +125,87 @@ a:hover {
 }
 
 .content-image {
-    width: 80%;
+    align-self: flex-start;
     justify-self: end;
+    margin-bottom: 0;
+    margin-top: 6rem;
     overflow: hidden;
+    width: 70%;
 }
 
 .content-image > img {
+    height: auto;
+    width: 100%;
+}
+
+/*Course Grid*/
+
+.course {
+    grid-column-end: span 2;
+}
+
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6rem;
     width: 100%;
     height: auto;
+}
+
+.course-block {
+    text-align: center;
+    border-radius: 2rem;
+    width: 26%;
+    margin: 0 auto;
+    height: auto;
+    background: white;
+    margin-bottom: 2%;
+}
+
+.course-block h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course-block p {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.course-block > img {
+    border-radius: 2rem 2rem 0 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.course-text {
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+}
+
+/*Button*/
+
+.btn {
+    background: var(--accent-color);
+    border-radius: 40px;
+    border: 0;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2rem auto;
+    outline: 0;
+    padding: 2rem 4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.btn:hover {
+    background: white;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 /*Icons
